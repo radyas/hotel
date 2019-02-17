@@ -18,8 +18,8 @@ class CreateMeetingsTable extends Migration
             $table->string('refno');
             $table->date('date');
             $table->timestamp('appointment_time');
-            $table->timestamp('arrival_time');
             $table->string('reason');
+            $table->timestamp('arrival_time');
             $table->integer('visitors_count');
             $table->boolean('added_sys');
             $table->timestamps();
