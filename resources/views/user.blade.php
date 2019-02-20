@@ -8,17 +8,17 @@
 @endsection
 
 @section('content_body')
-    <h3 class="heading_b uk-margin-bottom">Add Event</h3>
+    <h3 class="heading_b uk-margin-bottom">Add User</h3>
 
-    <form action="{{url('event')}}" method="post">
+    <form action="{{url('user')}}" method="post">
         <div class="md-card">
             <div class="md-card-content">
                 <div class="uk-grid" data-uk-grid-margin>
                     <div class="uk-width-1-1">
                         <div class="uk-form-row">
                             <div class="md-input-wrapper">
-                                <label>Event</label>
-                                <input name="event" type="text" class="md-input">
+                                <label>Name</label>
+                                <input name="name" type="text" class="md-input">
                                 <span class="md-input-bar"></span>
                             </div>
                         </div>
@@ -27,30 +27,30 @@
                     <div class="uk-width-1-1">
                         <div class="uk-form-row">
                             <div class="md-input-wrapper">
-                                <label for="uk_dp_1">Select date</label>
-                                <input class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+                                <label>NIC</label>
+                                <input name="nic" type="text" class="md-input">
                                 <span class="md-input-bar"></span>
                             </div>
                         </div>
                     </div>
-    
-                    <div class="uk-width-large-1-2 uk-width-medium-1-1">
-                        <div class="uk-input-group">
-                            <span class="uk-input-group-addon">
-                                <i class="uk-input-group-icon uk-icon-clock-o"></i>
-                            </span>
-                            <label for="uk_tp_1">Start time</label>
-                            <input class="md-input" name="start" type="text" id="uk_tp_1" data-uk-timepicker>
+
+                    <div class="uk-width-1-1">
+                        <div class="uk-form-row">
+                            <div class="md-input-wrapper">
+                                <label>Email</label>
+                                <input name="email" type="email" class="md-input">
+                                <span class="md-input-bar"></span>
+                            </div>
                         </div>
                     </div>
-    
-                    <div class="uk-width-large-1-2 uk-width-medium-1-1">
-                        <div class="uk-input-group">
-                            <span class="uk-input-group-addon">
-                                <i class="uk-input-group-icon uk-icon-clock-o"></i>
-                            </span>
-                            <label for="uk_tp_1">End time</label>
-                            <input class="md-input" name="end" type="text" id="uk_tp_2" data-uk-timepicker>
+
+                    <div class="uk-width-1-1">
+                        <div class="uk-form-row">
+                            <div class="md-input-wrapper">
+                                <label for="uk_dp_1">Birthday</label>
+                                <input name="birthday" class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+                                <span class="md-input-bar"></span>
+                            </div>
                         </div>
                     </div>
                     

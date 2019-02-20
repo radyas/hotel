@@ -65,6 +65,36 @@
                         Dashboard
                     </a>
                 </li>
+                <li>
+                    <a href="{{url('user')}}">
+                        <span class="menu_icon uk-icon-user"></span>
+                        Add User
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('meeting')}}">
+                        <span class="menu_icon uk-icon-calendar"></span>
+                        Add Meeting
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('consultant')}}">
+                        <span class="menu_icon uk-icon-user"></span>
+                        Add Consultant
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('event')}}">
+                        <span class="menu_icon uk-icon-calendar"></span>
+                        Add Event
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('profile')}}">
+                        <span class="menu_icon uk-icon-user"></span>
+                        Add Profile
+                    </a>
+                </li>
             </ul>
         </div>
     </aside><!-- main sidebar end -->
