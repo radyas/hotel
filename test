@@ -1,0 +1,77 @@
+Consultant
+
+·         Name
+
+·         Specialty(Description)
+
+ 
+
+Profile (Visitors)
+
+·         Name
+
+·         Nic
+
+·         Address
+
+·         Email
+
+·         Birthday
+
+·         Type (contact type id), added from the database
+
+·         Company (new company), get the id and save
+
+·         Can add many addresses for the company
+
+·         Can add many address for profile
+
+·         Can add many contact numbers for the company( number has a type)
+
+·         Can add many contact numbers for the profile
+
+ 
+
+If there’s a relationship should add the relationship (Family table)
+
+·         Profile id 1
+
+·         Profile id 2
+
+·         Relation (Create a relation in relation table and add the description), relation bet ween 2 profile
+
+Meetings
+
+·         Reference Number
+
+·         Date
+
+·         Appointment time
+
+·         Arrival time
+
+·         Reason
+
+·         Visitor count (Linking profile count)
+
+·         Can add visitors (multiple profile) to the meeting
+
+·         Can add multiple consultant to the meeting
+
+Events
+
+·         Event (name or something)
+
+·         Start time
+
+·         End time
+
+·         Description (eventscol)
+
+·         Meeting is also an event can select the meeting
+
+·         If it’s a shared event can select multiple users for the event
+
+·         If it’s a repeating event can add repeat by tabe (count/ how many times)
+
+·         Can add details to repeat_events (how long/ repeat_by id, event_id)

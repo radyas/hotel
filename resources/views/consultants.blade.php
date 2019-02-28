@@ -11,6 +11,7 @@
     <h3 class="heading_b uk-margin-bottom">Add Consultant</h3>
 
     <form action="{{url('consultant')}}" method="post">
+        @csrf
         <div class="md-card">
             <div class="md-card-content">
                 <div class="uk-grid" data-uk-grid-margin>
@@ -33,7 +34,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="uk-width-1-3"></div>
                     <div class="uk-width-1-3">
                         <div class="md-input-wrapper">

@@ -11,19 +11,30 @@
     <h3 class="heading_b uk-margin-bottom">Add Meeting</h3>
 
     <form action="{{url('meeting')}}" method="post">
+        @csrf
         <div class="md-card">
             <div class="md-card-content">
                 <div class="uk-grid" data-uk-grid-margin>
                     <div class="uk-width-1-1">
                         <div class="uk-form-row">
                             <div class="md-input-wrapper">
-                                <label for="uk_dp_1">Select date</label>
-                                <input class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+                                <label>Refno</label>
+                                <input name="ref" type="text" class="md-input" required autofocus>
                                 <span class="md-input-bar"></span>
                             </div>
                         </div>
                     </div>
-    
+
+                    <div class="uk-width-1-1">
+                        <div class="uk-form-row">
+                            <div class="md-input-wrapper">
+                                <label for="uk_dp_1">Select date</label>
+                                <input name='date' class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+                                <span class="md-input-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="uk-width-large-1-2 uk-width-medium-1-1">
                         <div class="uk-input-group">
                             <span class="uk-input-group-addon">
@@ -33,7 +44,7 @@
                             <input class="md-input" name="appointment" type="text" id="uk_tp_1" data-uk-timepicker>
                         </div>
                     </div>
-    
+
                     <div class="uk-width-large-1-2 uk-width-medium-1-1">
                         <div class="uk-input-group">
                             <span class="uk-input-group-addon">
@@ -43,7 +54,7 @@
                             <input class="md-input" name="arrival" type="text" id="uk_tp_2" data-uk-timepicker>
                         </div>
                     </div>
-                        
+
                     <div class="uk-width-1-1">
                         <div class="uk-form-row">
                             <div class="md-input-wrapper">
@@ -53,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="uk-width-1-1">
                         <div class="uk-form-row">
                             <div class="md-input-wrapper">
@@ -63,7 +74,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="uk-width-1-3"></div>
                     <div class="uk-width-1-3">
                         <div class="md-input-wrapper">

@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
+    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','birthday','NIC'
     ];
 
     /**
@@ -27,4 +28,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function addUser($name,$nic,$birthday,$email,$password)
+    {
+        return self::updateOrCreate(
+            ['email' => $email],
+            ['name' => $name, 'NIC' => $nic, 'birthday' => $birthday, 'password' => $password]
+        );
+    }
 }

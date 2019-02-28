@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('fonts'){{asset('')}}
+@section('fonts')
     @yield('content_fonts')
 @endsection
 
@@ -35,7 +35,10 @@
                                 <ul class="uk-nav js-uk-prevent">
                                     {{--  <li><a href="page_user_profile.html">My profile</a></li>  --}}
                                     {{--  <li><a href="page_settings.html">Settings</a></li>  --}}
-                                    <li><a href="login.html">Logout</a></li>
+                                    <li><a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                      document.getElementById('logout-form').submit();">
+                                         {{ __('Logout') }}</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -44,6 +47,9 @@
             </nav>
         </div>
 
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
 
     </header><!-- main header end -->
 
@@ -60,7 +66,7 @@
         <div class="menu_section">
             <ul>
                 <li>
-                    <a href="{{url('/')}}">
+                    <a href="{{ route('home')}}">
                         <span class="menu_icon uk-icon-th-large"></span>
                         Dashboard
                     </a>
@@ -104,9 +110,9 @@
             <div class="uk-grid" data-uk-grid-margin>
                 <div class="uk-width-medium-1-6"></div>
                 <div class="uk-width-medium-2-3">
-                    @yield('content_body')                    
+                    @yield('content_body')
                 </div>
-                <div class="uk-width-medium-1-6"></div>        
+                <div class="uk-width-medium-1-6"></div>
             </div>
         </div>
     </div>
